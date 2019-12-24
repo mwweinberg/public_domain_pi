@@ -39,8 +39,7 @@ request.onload = function() {
     //creates the image to be  posted
     var img = document.createElement("img");
     img.src = picked_image_URL;
-    //img.width = 100;
-    //img.height = 100;
+
     img.alt = 'picked_image_tombstone';
 
     //creates the text
@@ -48,13 +47,6 @@ request.onload = function() {
 
     //creates the linebreak
     var linebreak = document.createElement('br');
-
-
-    // This next line will just add the image and tombstone to the <body> tag
-    // document.body.appendChild(img);
-    // document.body.appendChild(linebreak);
-    // document.body.appendChild(tomb_text);
-
 
     let item = document.createElement('div');
     item.classList.add('item');
