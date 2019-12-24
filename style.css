@@ -1,0 +1,24 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#text {
+
+    font-size: 18px;
+}
+
+.container{
+
+      position: relative;
+
+}
+
+.textStyle {
+    font-family: "Arial Black", Gadget, sans-serif;
+    position: absolute;
+    bottom: 1px;
+    font-size: 40px;
+}
