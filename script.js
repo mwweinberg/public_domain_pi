@@ -1,4 +1,4 @@
-
+//TODO: fullscreen, turn off screen at night, start at boot
 
 
 
@@ -52,6 +52,18 @@ request.onload = function() {
     item.classList.add('item');
     item.innerHTML = `<div class="container"><img class="beach-image"  src="${picked_image_URL}" alt="beach image"/><div class="textStyle">${picked_image_tombstone}</div></div>`;
     document.body.appendChild(item);
+
+    //set up the refresh
+    //time is in ms
+    //this sets the range
+    var refresh_interval = getRndInteger(5000, 20000)
+    console.log("refresh rate = " + refresh_interval);
+    //this uses the range to reset the page
+    setTimeout(function(){
+        location = ''
+    },refresh_interval)
+
+
 
 
 }
