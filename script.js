@@ -1,6 +1,3 @@
-//TODO: turn off screen at night, start at boot
-
-
 
 //https://openaccess-api.clevelandart.org/api/artworks/?skip=5&limit=10&indent=1&cc0=1&has_image=1&department=Chinese%20Art
 
@@ -40,21 +37,16 @@ request.onload = function() {
 
     img.alt = 'picked_image_tombstone';
 
-    //creates the text
-    var tomb_text = document.createTextNode(picked_image_tombstone)
-
-    //creates the linebreak
-    var linebreak = document.createElement('br');
-
     let item = document.createElement('div');
     item.classList.add('item');
-    item.innerHTML = `<div class="container"><img class="beach-image"  src="${picked_image_URL}" alt="beach image"/><div class="textStyle">${picked_image_title}<br>${picked_image_author}<br>${picked_image_date}</div></div>`;
+    item.innerHTML = `<div class="container"><img class="picked_image"  src="${picked_image_URL}" alt="${picked_image_tombstone}"/><div class="textStyle">${picked_image_title}<br>${picked_image_author}<br>${picked_image_date}</div></div>`;
     document.body.appendChild(item);
 
     //set up the refresh
     //time is in ms
     //this sets the range
-    var refresh_interval = getRndInteger(5000, 20000)
+    //currently set at 30-90 minutes
+    var refresh_interval = getRndInteger(1800000, 5400000)
     console.log("refresh rate = " + refresh_interval);
     //this uses the range to reset the page
     setTimeout(function(){
